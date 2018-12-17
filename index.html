@@ -1,0 +1,29 @@
+#!/usr/bin/env perl
+#<meta charset="utf-8">
+use strict;use warnings;use utf8;use Time::HiRes qw/sleep/;
+my $m=<<'EOS';
+        ,:,    ,~=?IIII?+=:               
+     :7DMMM8I=+I77777777777I+~            
+    ?MMMMMMMMM87IIIIIIIIIII777I=,         
+   ,MMMMMMMMMMD7I7IIIIIII7IIII77I+,       
+    8MMMMMMM8$II7IIIIIIIIIIII7II77I=      
+    ,OMMMNO7II77I7IIIIIIIIIIII7III77+     
+    ,?Z8ZIII77III7IIIIIIIIIIIII7III7I~    
+   ,I7III777I7777IIII7IIIIIIIIIII7777NO,  
+   ?7II7777II=~?77777IIIIIIII77III77IZM?  
+  :7II77I7I7+    ~+?I777777IIIIII777I$D:  
+  ,I77?I7I7I   ,:   ^^:~~=+7777II7I7II~   
+   :8= ~7I7~ =$$IZI        :=?777II7??:   
+    8I  =77,$D8^^IMI,    ~II7?,:?7I7:+:   
+    :D?  ,=:M:    =DI  ~OMO7IN$ +77+      
+     ,$ZO? :Z$$7I?+NO$7D$,   ?OO?7I,      
+       ,8O    ,:~+?+ ,:OZ7I?+~$8?7~       
+         $O=            ,:=+?I$+$~        
+          =ZZ?,   =====~:       D=        
+            ~IZ$?~,,,::-        N~        
+               ~?$$$I+~:,   ,:?87         
+                   :=?7$$$$$$$I~          
+     定        時        退        社     
+EOS
+my @c=qw/31 33 32 36 34 35/;my $i=0;while(1){$i=(++$i)%6;print "\033[2J\033[H\033[1\033[$c[$i]m$m\033[m";sleep 0.3;}
+#<script>(b=>{b.innerHTML=`<pre style="font-family:Menlo,Consolas,monospace;">${b.innerHTML.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;let h=0;const a=()=>{h++;document.body.style=`background:#000;color:hsl(${h},100%,50%)`;requestAnimationFrame(a);};a()})(document.body)</script>
